@@ -11,10 +11,26 @@ https://reactjs.org/docs/lists-and-keys.html
 Feel free to create more components, such as header/footer,
 or why not include some more data from the array? */
 
-export const App = () => {
+export const App = ({
+  name,
+  types,
+}) => {
   return (
     <div className="App">
+      <p>
+        <span>Name:</span>
+        {name}
+      </p>
+      <p>
+        <span>Type:</span>
+        {types}
+      </p>
       <p>Pokemon goes here</p>
     </div>
   );
+};
+
+App.defaultProps = {
+  name: "Name missing",
+  types: "Not available",
 };
